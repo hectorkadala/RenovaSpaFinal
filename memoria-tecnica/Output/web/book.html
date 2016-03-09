@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Naranjo Kadala Héctor" />
+    <meta name="date" content="03/09/2016"/>
+    <meta name="generator" content="easybook 4.8"/>
+
+    <title>Memoria tecnica</title>
+
+    <link rel="stylesheet" href="./css/easybook.css" />
+
+</head>
+
+<body><div class="container">
+
+    <div class="item item:cover">
+
+<h1>Memoria tecnica</h1>
+
+<h2>Naranjo Kadala Héctor</h2>
+
+</div>
+    <div class="item item:toc">
+
+<h1>Table of contents</h1>
+
+<ul>
+                        
+                                                                <li class="chapter level-1">
+                        <span>Chapter 1</span> <a href="#planeacion">Planeación</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>1.1</span> <a href="#creacion-de-presupuesto">Creacion de presupuesto</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>1.2</span> <a href="#planeacion-3">Planeación</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>1.3</span> <a href="#analisis">analisis</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>1.4</span> <a href="#diseno">Diseño</a>
+                    </li>
+                            
+                            
+                                                                <li class="chapter level-1">
+                        <span>Chapter 2</span> <a href="#creacion-de-base-de-datos">Creación de base de datos</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>2.1</span> <a href="#diagramas-de-relacion">Diagramas de relacion</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>2.2</span> <a href="#codigo-de-creacion-de-base-de-datos">Código de creacion de base de datos</a>
+                    </li>
+                            
+                            
+                                                                <li class="chapter level-1">
+                        <span>Chapter 3</span> <a href="#codificacion">Codificacion</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>3.1</span> <a href="#insertar-dato">Insertar dato</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>3.2</span> <a href="#conexion-a-la-base-de-datos">Conexion a la base de datos:</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>3.3</span> <a href="#crear-esctructura">Crear esctructura</a>
+                    </li>
+                            
+                    </ul>
+
+</div>
+    <div class="item item:chapter">
+
+<h1 id="planeacion"><span>Chapter 1</span> Planeación</h1>
+
+<p>Antes de empezar nuestro programa, lo primero que hay que hacer, es nuestra documentación para poder basarnos en ella. ¿Por qué? lo primero es imaginar lo que vamos hacer, si vamos directamente a codificar, nos podemos trabar en alguna parte o nos pueden salir varios errores.</p>
+
+<h2 id="creacion-de-presupuesto">1.1 Creacion de presupuesto</h2>
+
+<p>Lo primero que hay que hacer es, crear un presupuesto economico.Esto nos sirve para saber cuanto vamos a cobrar por el proyecto y dependiendo de eso poder acpetarlo o no el proyecto que nos den.</p>
+
+<p>50 horas dividido entre 5 días de la semana = horas por semana
+    50/5=10 horas por semana</p>
+
+<pre><code>Cobro por hora $125 
+Cobro*HORAS = sueldo semanal
+125*10= 1250 por semana 
+
+5 semanas por 125 por hora
+5*125= 6250 $
+</code></pre>
+
+<p>6250 Seria el total de mi sueldo por trabajar en el proyecto por 50 horas 
+Total, del proyecto $6,250 pesos</p>
+
+<p>Condiciones de pago
+    Para poder empezar se pedirá un anticipo de $1000 pesos.
+    El proyecto se va dividir en 4 fase para mostrar avances.
+    Cada fase se pagará $1,312.5 pesos, que son 12 horas aproximadamente de trabajo.
+    Si el cliente, ya no desea continuar con el proyecto no se la va ser ningún rembolso de su anticipo y/o de su fase que ya haya pagado.
+    Si el cliente quiere cambiar algo antes que termine una fase no se le cobrara nada, pero si quiere cambiar algo que ya está terminado se le cobrar $250 pesos.
+    Cada pago de la fase, se le dará un comprobante de pago</p>
+
+<h2 id="planeacion-3">1.2 Planeación</h2>
+
+<p>Es importante adiminstrar nuestro tiempo correctamente, entonces hay que hacer un diagram de tiempo, para dividir las tareas que tenemos que hacer y en que dia lo vamos a realizar. Asi podremos avanzar con todas las tareas sin ningún problema</p>
+
+<div class="figure" id="figure-1-1">
+    <img src="images/diagrama.png" alt="Diagrama ventt" />
+
+    <p class="caption"><strong>Figure 1.1</strong> Diagrama ventt</p>
+</div>
+
+
+<h2 id="analisis">1.3 analisis</h2>
+
+<p>Tenemos que ver, que necesita nuestro programa que les pide para que funcione correctamente y cuales son las restriciones que debe tener.</p>
+
+<p>Requerimiento Funcionales:</p>
+
+<pre><code>El sistema no debe de funcionar con el internet, sino poder ejecutarse al 100% en la computadora o/y Tablet.
+La hoja de deslinde pueda cambiarse de idioma
+El sistema debe de tener una tecnología para capturar la firma electrónica del cliente
+Debe poder almacenar los datos del cliente
+Debe imprimir los datos del cliente en la hoja de deslinde
+Poder consultar en la base de datos
+Tener seguridad con la base de datos, ya que se maneja datos personales
+</code></pre>
+
+<p>Requerimiento No Funcionales:</p>
+
+<pre><code>Deber ser fácil de usar, e imprimir
+El ingreso a la base de datos debe ser restringido, bajo contraseña y usuarios definidos
+El sistema debe brindar comodidad al usuario y al personal que trabajen con el programa
+Deber ser multiplataforma que pueda funcionar en distintos tipos de software operativos
+El sistema debe soportar el manejo de gran canidad de datos
+El sistema no debe presentar ningún problema a la hora del manejo
+</code></pre>
+
+<h2 id="diseno">1.4 Diseño</h2>
+
+<p>En este caso vamos crear diagramas UML, que nos va servir como va interactuar nuestro programa con el usuario y como el usuario se interactua con el programa.
+Ahorita vamos a motrarle algunos ejemplos de algunos diagramas de UML, que nos permitira entender mejor nuestro programa.</p>
+
+<div class="figure" id="figure-1-2">
+    <img src="images/caso_de_uso.png" alt="Diagrama de caso de uso" />
+
+    <p class="caption"><strong>Figure 1.2</strong> Diagrama de caso de uso</p>
+</div>
+
+<div class="figure" id="figure-1-3">
+    <img src="images/diagrama_de_actividades.png" alt="Diagrama de actividades" />
+
+    <p class="caption"><strong>Figure 1.3</strong> Diagrama de actividades</p>
+</div>
+
+<div class="figure" id="figure-1-4">
+    <img src="images/diagrama_de_clases.png" alt="Diagrama de clases" />
+
+    <p class="caption"><strong>Figure 1.4</strong> Diagrama de clases</p>
+</div>
+
+
+
+</div>
+    <div class="item item:chapter">
+
+<h1 id="creacion-de-base-de-datos"><span>Chapter 2</span> Creación de base de datos</h1>
+
+<p>En este capitulo veremos como elaboramos la base de datos, y como hicimos los diagramas para que se relacionen las tablas entre si.</p>
+
+<h2 id="diagramas-de-relacion">2.1 Diagramas de relacion</h2>
+
+<p>Antes de empezar a crear la base de datos, es importante saber cuantas tablas vamos a crear, sus campos, llaves foreaneas, id. Así podremos diseñar correctamente nuestra base de datos si que tenga errores, esto nos servira igual para ahorrar tiempo.</p>
+
+<div class="figure" id="figure-2-1">
+    <img src="images/Modelo_1.png" alt="Diagrama de base de datos" />
+
+    <p class="caption"><strong>Figure 2.1</strong> Diagrama de base de datos</p>
+</div>
+
+
+<h2 id="codigo-de-creacion-de-base-de-datos">2.2 Código de creacion de base de datos</h2>
+
+<p>En esta parte veremos como creamos la base de datos, y las tablas que utilizamos para poder hacerlas
+Entonces se ve asi:</p>
+
+<div class="code sql">
+<pre class="sql">    <span class="co1">-- phpMyAdmin SQL Dump</span>
+    <span class="co1">-- version 4.2.11</span>
+    <span class="co1">-- http://www.phpmyadmin.net</span>
+    <span class="co1">--</span>
+    <span class="co1">-- Host: 127.0.0.1</span>
+    <span class="co1">-- Generation Time: Mar 09, 2016 at 02:24 PM</span>
+    <span class="co1">-- Server version: 5.6.21</span>
+    <span class="co1">-- PHP Version: 5.5.19</span>
+&nbsp;
+    <span class="kw1">SET</span> SQL_MODE <span class="sy0">=</span> <span class="st0">&quot;NO_AUTO_VALUE_ON_ZERO&quot;</span>;
+    <span class="kw1">SET</span> time_zone <span class="sy0">=</span> <span class="st0">&quot;+00:00&quot;</span>;
+&nbsp;
+&nbsp;
+    <span class="coMULTI">/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */</span>;
+    <span class="coMULTI">/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */</span>;
+    <span class="coMULTI">/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */</span>;
+    <span class="coMULTI">/*!40101 SET NAMES utf8 */</span>;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Database: `renovaspa1`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="co1">-- --------------------------------------------------------</span>
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Table structure for table `agencias`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">CREATE</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">NOT</span> <span class="kw1">EXISTS</span> <span class="st0">`agencias`</span> <span class="br0">&#40;</span>
+    <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`razon_social`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">45</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`nombre_comercial`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">45</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`telefono`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">45</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`correo_electronico`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">45</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span>
+    <span class="br0">&#41;</span> ENGINE<span class="sy0">=</span>InnoDB <span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">8</span> <span class="kw1">DEFAULT</span> CHARSET<span class="sy0">=</span>utf8;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Dumping data for table `agencias`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">INSERT</span> <span class="kw1">INTO</span> <span class="st0">`agencias`</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="sy0">,</span> <span class="st0">`razon_social`</span><span class="sy0">,</span> <span class="st0">`nombre_comercial`</span><span class="sy0">,</span> <span class="st0">`telefono`</span><span class="sy0">,</span> <span class="st0">`correo_electronico`</span><span class="br0">&#41;</span> <span class="kw1">VALUES</span>
+    <span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span> <span class="st0">'xcaret plus'</span><span class="sy0">,</span> <span class="st0">'xcaret'</span><span class="sy0">,</span> <span class="st0">'984161'</span><span class="sy0">,</span> <span class="st0">'xcaret@hotmail.com'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">2</span><span class="sy0">,</span> <span class="st0">'xcaret plus'</span><span class="sy0">,</span> <span class="st0">'xcaret'</span><span class="sy0">,</span> <span class="st0">'984161'</span><span class="sy0">,</span> <span class="st0">'xcaret@hotmail.com'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">3</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">4</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">5</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">6</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">'BestBuy'</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">7</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">'Best day'</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">-- --------------------------------------------------------</span>
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Table structure for table `circustancias_medicas`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">CREATE</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">NOT</span> <span class="kw1">EXISTS</span> <span class="st0">`circustancias_medicas`</span> <span class="br0">&#40;</span>
+    <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`nombre`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">45</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span>
+    <span class="br0">&#41;</span> ENGINE<span class="sy0">=</span>InnoDB <span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">6</span> <span class="kw1">DEFAULT</span> CHARSET<span class="sy0">=</span>utf8;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Dumping data for table `circustancias_medicas`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">INSERT</span> <span class="kw1">INTO</span> <span class="st0">`circustancias_medicas`</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="sy0">,</span> <span class="st0">`nombre`</span><span class="br0">&#41;</span> <span class="kw1">VALUES</span>
+    <span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span> <span class="st0">'alergia'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">2</span><span class="sy0">,</span> <span class="st0">'alergia'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">3</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">4</span><span class="sy0">,</span> <span class="st0">'claustrofobia'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">5</span><span class="sy0">,</span> <span class="st0">'problemas'</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">-- --------------------------------------------------------</span>
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Table structure for table `cliente`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">CREATE</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">NOT</span> <span class="kw1">EXISTS</span> <span class="st0">`cliente`</span> <span class="br0">&#40;</span>
+    <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`pais_id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`idioma_id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`hotel_id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`agencia_id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`circustancia_medica:id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`fecha_alta`</span> <span class="kw1">DATE</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`nombre`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">60</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`apellidos`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">255</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`edad`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`correo_electronico`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">255</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`habitacion`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">50</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span>
+    <span class="br0">&#41;</span> ENGINE<span class="sy0">=</span>InnoDB <span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">8</span> <span class="kw1">DEFAULT</span> CHARSET<span class="sy0">=</span>utf8;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Dumping data for table `cliente`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">INSERT</span> <span class="kw1">INTO</span> <span class="st0">`cliente`</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="sy0">,</span> <span class="st0">`pais_id`</span><span class="sy0">,</span> <span class="st0">`idioma_id`</span><span class="sy0">,</span> <span class="st0">`hotel_id`</span><span class="sy0">,</span> <span class="st0">`agencia_id`</span><span class="sy0">,</span> <span class="st0">`circustancia_medica:id`</span><span class="sy0">,</span> <span class="st0">`fecha_alta`</span><span class="sy0">,</span> <span class="st0">`nombre`</span><span class="sy0">,</span> <span class="st0">`apellidos`</span><span class="sy0">,</span> <span class="st0">`edad`</span><span class="sy0">,</span> <span class="st0">`correo_electronico`</span><span class="sy0">,</span> <span class="st0">`habitacion`</span><span class="br0">&#41;</span> <span class="kw1">VALUES</span>
+    <span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="st0">'2016-03-01'</span><span class="sy0">,</span> <span class="st0">'juan'</span><span class="sy0">,</span> <span class="st0">'tu'</span><span class="sy0">,</span> <span class="nu0">19</span><span class="sy0">,</span> <span class="st0">'juan@cachondo'</span><span class="sy0">,</span> <span class="st0">'69'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="st0">'2016-03-01'</span><span class="sy0">,</span> <span class="st0">'juan'</span><span class="sy0">,</span> <span class="st0">'Rivera'</span><span class="sy0">,</span> <span class="nu0">22</span><span class="sy0">,</span> <span class="st0">'Juan@hotmail.com'</span><span class="sy0">,</span> <span class="st0">'65'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">3</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="st0">'2016-03-01'</span><span class="sy0">,</span> <span class="st0">'juan'</span><span class="sy0">,</span> <span class="st0">'Rivera'</span><span class="sy0">,</span> <span class="nu0">22</span><span class="sy0">,</span> <span class="st0">'Juan@hotmail.com'</span><span class="sy0">,</span> <span class="st0">'65'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">4</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="st0">'0000-00-00'</span><span class="sy0">,</span> <span class="st0">'andres'</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="nu0">3</span><span class="sy0">,</span> <span class="st0">'andres@hoymail.com'</span><span class="sy0">,</span> <span class="st0">'habitacion'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">5</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="st0">'0000-00-00'</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">6</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="st0">'0000-00-00'</span><span class="sy0">,</span> <span class="st0">'Cesar'</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="nu0">21</span><span class="sy0">,</span> <span class="st0">'Cesar@hotmail.com'</span><span class="sy0">,</span> <span class="st0">'293'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">7</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="st0">'0000-00-00'</span><span class="sy0">,</span> <span class="st0">'Andy'</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="nu0">22</span><span class="sy0">,</span> <span class="st0">'Andycerca@hotmail.com'</span><span class="sy0">,</span> <span class="st0">'69'</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">-- --------------------------------------------------------</span>
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Table structure for table `hoteles`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">CREATE</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">NOT</span> <span class="kw1">EXISTS</span> <span class="st0">`hoteles`</span> <span class="br0">&#40;</span>
+    <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`nombre`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">45</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`ubicacion`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">45</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span>
+    <span class="br0">&#41;</span> ENGINE<span class="sy0">=</span>InnoDB <span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">5</span> <span class="kw1">DEFAULT</span> CHARSET<span class="sy0">=</span>utf8;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Dumping data for table `hoteles`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">INSERT</span> <span class="kw1">INTO</span> <span class="st0">`hoteles`</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="sy0">,</span> <span class="st0">`nombre`</span><span class="sy0">,</span> <span class="st0">`ubicacion`</span><span class="br0">&#41;</span> <span class="kw1">VALUES</span>
+    <span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span> <span class="st0">'barcelo'</span><span class="sy0">,</span> <span class="st0">'por ahi'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">2</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">3</span><span class="sy0">,</span> <span class="st0">'Black Seal'</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">4</span><span class="sy0">,</span> <span class="st0">'Hilton'</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">-- --------------------------------------------------------</span>
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Table structure for table `idiomas`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">CREATE</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">NOT</span> <span class="kw1">EXISTS</span> <span class="st0">`idiomas`</span> <span class="br0">&#40;</span>
+    <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`nombre`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">45</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span>
+    <span class="br0">&#41;</span> ENGINE<span class="sy0">=</span>InnoDB <span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">2</span> <span class="kw1">DEFAULT</span> CHARSET<span class="sy0">=</span>utf8;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Dumping data for table `idiomas`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">INSERT</span> <span class="kw1">INTO</span> <span class="st0">`idiomas`</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="sy0">,</span> <span class="st0">`nombre`</span><span class="br0">&#41;</span> <span class="kw1">VALUES</span>
+    <span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span> <span class="st0">'español'</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">-- --------------------------------------------------------</span>
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Table structure for table `opiniones`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">CREATE</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">NOT</span> <span class="kw1">EXISTS</span> <span class="st0">`opiniones`</span> <span class="br0">&#40;</span>
+    <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`nombre`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">60</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span>
+    <span class="br0">&#41;</span> ENGINE<span class="sy0">=</span>InnoDB <span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">6</span> <span class="kw1">DEFAULT</span> CHARSET<span class="sy0">=</span>utf8;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Dumping data for table `opiniones`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">INSERT</span> <span class="kw1">INTO</span> <span class="st0">`opiniones`</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="sy0">,</span> <span class="st0">`nombre`</span><span class="br0">&#41;</span> <span class="kw1">VALUES</span>
+    <span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span> <span class="st0">'buena la chava'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">2</span><span class="sy0">,</span> <span class="st0">'buena la chava'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">3</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">4</span><span class="sy0">,</span> <span class="st0">'bueni'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">5</span><span class="sy0">,</span> <span class="st0">'muyBueno'</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">-- --------------------------------------------------------</span>
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Table structure for table `paises`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">CREATE</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">NOT</span> <span class="kw1">EXISTS</span> <span class="st0">`paises`</span> <span class="br0">&#40;</span>
+    <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`nombre`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">60</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span>
+    <span class="br0">&#41;</span> ENGINE<span class="sy0">=</span>InnoDB <span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">6</span> <span class="kw1">DEFAULT</span> CHARSET<span class="sy0">=</span>utf8;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Dumping data for table `paises`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">INSERT</span> <span class="kw1">INTO</span> <span class="st0">`paises`</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="sy0">,</span> <span class="st0">`nombre`</span><span class="br0">&#41;</span> <span class="kw1">VALUES</span>
+    <span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span> <span class="st0">'mexico'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">2</span><span class="sy0">,</span> <span class="st0">'italia'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">3</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">4</span><span class="sy0">,</span> <span class="st0">'China'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">5</span><span class="sy0">,</span> <span class="st0">'No muy cerca'</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">-- --------------------------------------------------------</span>
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Table structure for table `sesiones`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">CREATE</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">NOT</span> <span class="kw1">EXISTS</span> <span class="st0">`sesiones`</span> <span class="br0">&#40;</span>
+    <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`opinion_id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`cliente_id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`terapeuta_id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`tratamietno_id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span>
+    <span class="br0">&#41;</span> ENGINE<span class="sy0">=</span>InnoDB <span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">3</span> <span class="kw1">DEFAULT</span> CHARSET<span class="sy0">=</span>utf8;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Dumping data for table `sesiones`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">INSERT</span> <span class="kw1">INTO</span> <span class="st0">`sesiones`</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="sy0">,</span> <span class="st0">`opinion_id`</span><span class="sy0">,</span> <span class="st0">`cliente_id`</span><span class="sy0">,</span> <span class="st0">`terapeuta_id`</span><span class="sy0">,</span> <span class="st0">`tratamietno_id`</span><span class="br0">&#41;</span> <span class="kw1">VALUES</span>
+    <span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">-- --------------------------------------------------------</span>
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Table structure for table `terapeutas`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">CREATE</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">NOT</span> <span class="kw1">EXISTS</span> <span class="st0">`terapeutas`</span> <span class="br0">&#40;</span>
+    <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`nombre`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">60</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`terapeutascol`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">45</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span>
+    <span class="br0">&#41;</span> ENGINE<span class="sy0">=</span>InnoDB <span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">8</span> <span class="kw1">DEFAULT</span> CHARSET<span class="sy0">=</span>utf8;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Dumping data for table `terapeutas`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">INSERT</span> <span class="kw1">INTO</span> <span class="st0">`terapeutas`</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="sy0">,</span> <span class="st0">`nombre`</span><span class="sy0">,</span> <span class="st0">`terapeutascol`</span><span class="br0">&#41;</span> <span class="kw1">VALUES</span>
+    <span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span> <span class="st0">'melisa'</span><span class="sy0">,</span> <span class="st0">'hola'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">2</span><span class="sy0">,</span> <span class="st0">'melisa'</span><span class="sy0">,</span> <span class="st0">'hola'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">3</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">4</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">5</span><span class="sy0">,</span> <span class="st0">''</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">6</span><span class="sy0">,</span> <span class="st0">'Andrea'</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">7</span><span class="sy0">,</span> <span class="st0">'milissa'</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">-- --------------------------------------------------------</span>
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Table structure for table `tratamientos`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">CREATE</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">NOT</span> <span class="kw1">EXISTS</span> <span class="st0">`tratamientos`</span> <span class="br0">&#40;</span>
+    <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+      <span class="st0">`nombre`</span> <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">60</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span>
+    <span class="br0">&#41;</span> ENGINE<span class="sy0">=</span>InnoDB <span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">8</span> <span class="kw1">DEFAULT</span> CHARSET<span class="sy0">=</span>utf8;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Dumping data for table `tratamientos`</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="kw1">INSERT</span> <span class="kw1">INTO</span> <span class="st0">`tratamientos`</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="sy0">,</span> <span class="st0">`nombre`</span><span class="br0">&#41;</span> <span class="kw1">VALUES</span>
+    <span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span> <span class="st0">'masaje feliz'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">2</span><span class="sy0">,</span> <span class="st0">'masaje feliz'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">3</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">4</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">5</span><span class="sy0">,</span> <span class="st0">''</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">6</span><span class="sy0">,</span> <span class="st0">'Fisico'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    <span class="br0">&#40;</span><span class="nu0">7</span><span class="sy0">,</span> <span class="st0">'Belleza'</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Indexes for dumped tables</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Indexes for table `agencias`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`agencias`</span>
+     <span class="kw1">ADD</span> <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Indexes for table `circustancias_medicas`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`circustancias_medicas`</span>
+     <span class="kw1">ADD</span> <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Indexes for table `cliente`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`cliente`</span>
+     <span class="kw1">ADD</span> <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="kw1">ADD</span> <span class="kw1">KEY</span> <span class="st0">`pais_id`</span> <span class="br0">&#40;</span><span class="st0">`pais_id`</span><span class="sy0">,</span><span class="st0">`idioma_id`</span><span class="sy0">,</span><span class="st0">`hotel_id`</span><span class="sy0">,</span><span class="st0">`agencia_id`</span><span class="sy0">,</span><span class="st0">`circustancia_medica:id`</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="kw1">ADD</span> <span class="kw1">KEY</span> <span class="st0">`circustancia_medica:id`</span> <span class="br0">&#40;</span><span class="st0">`circustancia_medica:id`</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="kw1">ADD</span> <span class="kw1">KEY</span> <span class="st0">`agencia_id`</span> <span class="br0">&#40;</span><span class="st0">`agencia_id`</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="kw1">ADD</span> <span class="kw1">KEY</span> <span class="st0">`hotel_id`</span> <span class="br0">&#40;</span><span class="st0">`hotel_id`</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="kw1">ADD</span> <span class="kw1">KEY</span> <span class="st0">`idioma_id`</span> <span class="br0">&#40;</span><span class="st0">`idioma_id`</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Indexes for table `hoteles`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`hoteles`</span>
+     <span class="kw1">ADD</span> <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Indexes for table `idiomas`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`idiomas`</span>
+     <span class="kw1">ADD</span> <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Indexes for table `opiniones`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`opiniones`</span>
+     <span class="kw1">ADD</span> <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Indexes for table `paises`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`paises`</span>
+     <span class="kw1">ADD</span> <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Indexes for table `sesiones`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`sesiones`</span>
+     <span class="kw1">ADD</span> <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="kw1">ADD</span> <span class="kw1">KEY</span> <span class="st0">`opinion_id_2`</span> <span class="br0">&#40;</span><span class="st0">`opinion_id`</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="kw1">ADD</span> <span class="kw1">KEY</span> <span class="st0">`cliente_id`</span> <span class="br0">&#40;</span><span class="st0">`cliente_id`</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="kw1">ADD</span> <span class="kw1">KEY</span> <span class="st0">`terapeuta_id`</span> <span class="br0">&#40;</span><span class="st0">`terapeuta_id`</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="kw1">ADD</span> <span class="kw1">KEY</span> <span class="st0">`tratamietno_id`</span> <span class="br0">&#40;</span><span class="st0">`tratamietno_id`</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Indexes for table `terapeutas`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`terapeutas`</span>
+     <span class="kw1">ADD</span> <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- Indexes for table `tratamientos`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`tratamientos`</span>
+     <span class="kw1">ADD</span> <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">&#40;</span><span class="st0">`id`</span><span class="br0">&#41;</span>;
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- AUTO_INCREMENT for dumped tables</span>
+    <span class="co1">--</span>
+&nbsp;
+    <span class="co1">--</span>
+    <span class="co1">-- AUTO_INCREMENT for table `agencias`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`agencias`</span>
+    <span class="kw1">MODIFY</span> <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span> <span class="kw1">AUTO_INCREMENT</span><span class="sy0">,</span><span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">8</span>;
+    <span class="co1">--</span>
+    <span class="co1">-- AUTO_INCREMENT for table `circustancias_medicas`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`circustancias_medicas`</span>
+    <span class="kw1">MODIFY</span> <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span> <span class="kw1">AUTO_INCREMENT</span><span class="sy0">,</span><span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">6</span>;
+    <span class="co1">--</span>
+    <span class="co1">-- AUTO_INCREMENT for table `cliente`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`cliente`</span>
+    <span class="kw1">MODIFY</span> <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span> <span class="kw1">AUTO_INCREMENT</span><span class="sy0">,</span><span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">8</span>;
+    <span class="co1">--</span>
+    <span class="co1">-- AUTO_INCREMENT for table `hoteles`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`hoteles`</span>
+    <span class="kw1">MODIFY</span> <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span> <span class="kw1">AUTO_INCREMENT</span><span class="sy0">,</span><span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">5</span>;
+    <span class="co1">--</span>
+    <span class="co1">-- AUTO_INCREMENT for table `idiomas`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`idiomas`</span>
+    <span class="kw1">MODIFY</span> <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span> <span class="kw1">AUTO_INCREMENT</span><span class="sy0">,</span><span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">2</span>;
+    <span class="co1">--</span>
+    <span class="co1">-- AUTO_INCREMENT for table `opiniones`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`opiniones`</span>
+    <span class="kw1">MODIFY</span> <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span> <span class="kw1">AUTO_INCREMENT</span><span class="sy0">,</span><span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">6</span>;
+    <span class="co1">--</span>
+    <span class="co1">-- AUTO_INCREMENT for table `paises`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`paises`</span>
+    <span class="kw1">MODIFY</span> <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span> <span class="kw1">AUTO_INCREMENT</span><span class="sy0">,</span><span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">6</span>;
+    <span class="co1">--</span>
+    <span class="co1">-- AUTO_INCREMENT for table `sesiones`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`sesiones`</span>
+    <span class="kw1">MODIFY</span> <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span> <span class="kw1">AUTO_INCREMENT</span><span class="sy0">,</span><span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">3</span>;
+    <span class="co1">--</span>
+    <span class="co1">-- AUTO_INCREMENT for table `terapeutas`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`terapeutas`</span>
+    <span class="kw1">MODIFY</span> <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span> <span class="kw1">AUTO_INCREMENT</span><span class="sy0">,</span><span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">8</span>;
+    <span class="co1">--</span>
+    <span class="co1">-- AUTO_INCREMENT for table `tratamientos`</span>
+    <span class="co1">--</span>
+    <span class="kw1">ALTER</span> <span class="kw1">TABLE</span> <span class="st0">`tratamientos`</span>
+    <span class="kw1">MODIFY</span> <span class="st0">`id`</span> <span class="kw1">INT</span><span class="br0">&#40;</span><span class="nu0">11</span><span class="br0">&#41;</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span> <span class="kw1">AUTO_INCREMENT</span><span class="sy0">,</span><span class="kw1">AUTO_INCREMENT</span><span class="sy0">=</span><span class="nu0">8</span>;
+    <span class="coMULTI">/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */</span>;
+    <span class="coMULTI">/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */</span>;
+    <span class="coMULTI">/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */</span>;</pre>
+</div>
+
+
+</div>
+    <div class="item item:chapter">
+
+<h1 id="codificacion"><span>Chapter 3</span> Codificacion</h1>
+
+<p>Despúes de hacer toda la documentación, ahora si podremos empezar con nuestro programa:</p>
+
+<h2 id="insertar-dato">3.1 Insertar dato</h2>
+
+<p>Aqui metemos los datos que inserta el usuario y los guarda en la base de datos.</p>
+
+<div class="code php">
+<pre class="php">    <span class="co4">/**
+    * @author Naranjo Kadala Héctor
+    * @author Naranjo Kadala Héctor&lt;hectorhbk@hotmail.com&gt;
+    */</span>
+&nbsp;
+    <span class="co4">/**
+    * En esta parte recibimos los parametros del archivo index.php los campos
+    * que llene el cliente.
+    */</span>
+    <span class="re0">$nombre</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'name'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$edad</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'age'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$pais</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'country'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$email</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'email'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$hotel</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'hotel'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$habitacion</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'room'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$agencia</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'agency'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$tratamiento</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'treatment'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$terapeuta</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'therapist'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$opcion</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'opcion'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$calificacion</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'score'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="co4">/**
+    * Aqui llamamos el archivo conexion.php para poder consultar a base de datos
+    *y poder guardar datos.
+    */</span>
+    <span class="kw1">require</span><span class="br0">&#40;</span><span class="st0">&quot;conexion.php&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="co4">/**
+    *Creamos variables para poder insertar en la base de datos donde la variable especifica
+    *a que tabla se va insertar y que campos se van llenar
+    */</span>
+    <span class="re0">$agregarCliente</span><span class="sy0">=</span><span class="kw3">mysql_query</span><span class="br0">&#40;</span><span class="st0">&quot;INSERT INTO cliente(nombre, edad, correo_electronico, habitacion)
+     VALUES ('<span class="es4">$nombre</span>','<span class="es4">$edad</span>','<span class="es4">$email</span>','<span class="es4">$habitacion</span>')&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="re0">$agregarPais</span><span class="sy0">=</span><span class="kw3">mysql_query</span><span class="br0">&#40;</span><span class="st0">&quot;INSERT INTO paises(nombre) VALUES ('<span class="es4">$pais</span>')&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="re0">$agregarAgencia</span><span class="sy0">=</span><span class="kw3">mysql_query</span><span class="br0">&#40;</span><span class="st0">&quot;INSERT INTO agencias(nombre_comercial) VALUES ('<span class="es4">$agencia</span>')&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="re0">$agregarHotel</span><span class="sy0">=</span><span class="kw3">mysql_query</span><span class="br0">&#40;</span><span class="st0">&quot;INSERT INTO hoteles(nombre) VALUES ('<span class="es4">$hotel</span>')&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="re0">$agregarTratamientos</span><span class="sy0">=</span><span class="kw3">mysql_query</span><span class="br0">&#40;</span><span class="st0">&quot;INSERT INTO tratamientos(nombre) VALUES ('<span class="es4">$tratamiento</span>')&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="re0">$agregarTerapeuta</span><span class="sy0">=</span><span class="kw3">mysql_query</span><span class="br0">&#40;</span><span class="st0">&quot;INSERT INTO terapeutas(nombre) VALUES ('<span class="es4">$terapeuta</span>')&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="re0">$agregarMedica</span><span class="sy0">=</span><span class="kw3">mysql_query</span><span class="br0">&#40;</span><span class="st0">&quot;INSERT INTO circustancias_medicas(nombre) VALUES ('<span class="es4">$opcion</span>')&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="re0">$agregarOpiniones</span><span class="sy0">=</span><span class="kw3">mysql_query</span><span class="br0">&#40;</span><span class="st0">&quot;INSERT INTO opiniones(nombre) VALUES ('<span class="es4">$calificacion</span>')&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="co4">/**
+    *Aqui mandamos un mensaje que se guardo correctamente  y nos redirige a index.php de nuevo 
+    */</span>
+    <span class="kw1">echo</span> <span class="st0">&quot;Guardo con exito&quot;</span><span class="sy0">;</span>
+    <span class="kw3">header</span><span class="br0">&#40;</span><span class="st0">&quot;location: index.php&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="sy1">?&gt;</span></pre>
+</div>
+
+<h2 id="conexion-a-la-base-de-datos">3.2 Conexion a la base de datos:</h2>
+
+<p>Esto sirve para que nos podamos enlzar a la base de datos</p>
+
+<div class="code php">
+<pre class="php">    <span class="kw2">&lt;?php</span>
+    <span class="co4">/**
+    * @author Naranjo Kadala Héctor
+    * @author Naranjo Kadala Héctor&lt;hectorhbk@hotmail.com&gt;
+    */</span>
+&nbsp;
+    <span class="co4">/**
+    *Hacemos una conexion en la base de datos llamada renovaspa1m
+    */</span>
+&nbsp;
+&nbsp;
+    <span class="re0">$conexion</span> <span class="sy0">=</span> <span class="kw3">mysql_connect</span><span class="br0">&#40;</span><span class="st0">&quot;localhost&quot;</span><span class="sy0">,</span><span class="st0">&quot;root&quot;</span><span class="sy0">,</span><span class="st0">&quot;&quot;</span><span class="br0">&#41;</span> Or <span class="kw3">die</span><span class="br0">&#40;</span><span class="st0">&quot;No se pudo conectar&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$conexion</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+        <span class="kw3">mysql_select_db</span><span class="br0">&#40;</span><span class="st0">&quot;renovaspa1&quot;</span><span class="sy0">,</span><span class="re0">$conexion</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span><span class="kw1">else</span><span class="br0">&#123;</span>
+        <span class="kw1">echo</span> <span class="st0">&quot;Error&quot;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+    <span class="sy1">?&gt;</span></pre>
+</div>
+
+<h2 id="crear-esctructura">3.3 Crear esctructura</h2>
+
+<p>Después de eso ahora falta crear nuestra esctructura en html:</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">html</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">head</span> <span class="kw3">lang</span><span class="sy0">=</span><span class="st0">&quot;es&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">link</span> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;css/style.css&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">meta</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>Renova Spa<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">header</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">header</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;formulario&quot;</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;imagenes/renovaspa.png&quot;</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;renova&quot;</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">h1</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;clear: center;&quot;</span>&gt;</span>Exoneración de Responsabilidad<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">nav</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">ul</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">li</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Opcion 1&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span>&gt;</span>Bienvenido<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">li</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Opcion 2&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span>&gt;</span>welcome<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">li</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Opcion 3&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span>&gt;</span>willkommen<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">li</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Opcion 4&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span>&gt;</span>benvenuto<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">li</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Opcion 5&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span>&gt;</span>valkomen<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">li</span>&gt;&lt;<span class="kw2">a</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Opcion 5&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span>&gt;</span>bienvenue<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+        <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">nav</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Por favor, dedique unos minutos a leer cuidadosamente
+        la información siguiente y suscribirla con una 
+        firma al finalizar. Muchuas gracias.
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;Relleno&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">form</span>  <span class="kw3">method</span><span class="sy0">=</span><span class="st0">&quot;post&quot;</span> <span class="kw3">action</span><span class="sy0">=</span><span class="st0">&quot;guardar.php&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">placeholder</span><span class="sy0">=</span><span class="st0">&quot;Nombre:&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;textNom&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;name&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;number&quot;</span> <span class="kw3">placeholder</span><span class="sy0">=</span><span class="st0">&quot;Edad:&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;textEda&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;age&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">placeholder</span><span class="sy0">=</span><span class="st0">&quot;País:&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;textPai&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;country&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span><span class="kw3">placeholder</span><span class="sy0">=</span><span class="st0">&quot;E-mail:&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;textEma&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;email&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">placeholder</span><span class="sy0">=</span><span class="st0">&quot;Hotel:&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;textHot&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;hotel&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">placeholder</span><span class="sy0">=</span><span class="st0">&quot;Habitación:&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;textHab&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;room&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">placeholder</span><span class="sy0">=</span><span class="st0">&quot;Agencia de viaje:&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;textAge&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;agency&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">placeholder</span><span class="sy0">=</span><span class="st0">&quot;Tratamiento:&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;textTra&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;treatment&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">placeholder</span><span class="sy0">=</span><span class="st0">&quot;Terapeuta&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;textTer&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;therapist&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">ol</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">li</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;1&quot;</span>&gt;</span> El mesaje o tratamietno que usted va a recibir tiene el propósito 
+            básico de la relajación y el alivio de la tensión muscular superficial.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Si usted está inastfecho con el servicio, o experimenta cualquier tipo de molestia  o dolor durante la 
+        sesión, informe por favor al terapeuta cuanto antes.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Si no se menciona nada durante la sesión, asumiremos que no ha habido
+         ningún problema.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+            <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Hágamos saber antes del inicio de la sesión si se encuentra bajo algunas de 
+        las siguientes circuntancias:<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;checkbox&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;opcion&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;embarazo&quot;</span>&gt;</span>Embarazo<span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;checkbox&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;corazon&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;opcion&quot;</span>&gt;</span>Problemas del corazón
+        <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;checkbox&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;claustrofobia&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;opcion&quot;</span>&gt;</span>Claustrofobia<span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;checkbox&quot;</span><span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;dolor&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;opcion&quot;</span>&gt;</span>Dolor general
+        <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;checkbox&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;alergia&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;opcion&quot;</span>&gt;</span>Alergía <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;checkbox&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;epilepsia&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;opcion&quot;</span>&gt;</span>Epilepsia<span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;checkbox&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;piel&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;opcion&quot;</span>&gt;</span>Problemas en la piel <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;checkbox&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;cirugia&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;opcion&quot;</span>&gt;</span>Cirugía reciente
+        <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;checkbox&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;problemas&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;opcion&quot;</span>&gt;</span>Problemas o lesión de la espina dorsal 
+        <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;checkbox&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;daibetes&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;opcion&quot;</span>&gt;</span>Diabetes <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;checkbox&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;acne&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;opcion&quot;</span>&gt;</span>Acne<span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;checkbox&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;opcion&quot;</span>&gt;</span>algún otro desquilibrio de la salud:
+        <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;text-align: center;&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;otro&quot;</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">textarea</span> <span class="kw3">rows</span><span class="sy0">=</span><span class="st0">&quot;5&quot;</span> <span class="kw3">cols</span><span class="sy0">=</span><span class="st0">&quot;80&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;comentario&quot;</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;comentario&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;opcion&quot;</span>&gt;</span>
+&nbsp;
+        <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">textarea</span>&gt;</span>    
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Cualquier insinuación, hecho o propuesta de caracter ocasionara el final inmediato
+            dela sesión él/la huésped seera obligada al pago completo del servicio<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">li</span>&gt;</span>Por la seguridad de sus valores, le sugerimos dejarlos en la caja fuerte de su habitación.<span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+            Renova Spa no asumirá ninguna responsabiidad por robo o extravío de valores<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">li</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ol</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Le agradecemos su compresión y esperamos que difrute de nuestros servicios.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+&nbsp;
+    <span class="sc2">&lt;<span class="kw2">table</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;margin: 0 auto;&quot;</span>  <span class="kw3">width</span><span class="sy0">=</span><span class="st0">&quot;100%&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">tr</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">td</span>&gt;&lt;<span class="kw2">hr</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">'width: 50%'</span>&gt;</span>Firma del Terapeuta<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">td</span>&gt;&lt;<span class="kw2">hr</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">'width: 50%'</span>&gt;</span>Firma del Cliente<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">td</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">tr</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">table</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">p</span>&gt;</span>Por favor ayúdenos a mejorar nuestros servicios dándonos su opinión sobre le servicio recibido.<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">p</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;imagenes&quot;</span> <span class="kw3">align</span><span class="sy0">=</span><span class="st0">&quot;center&quot;</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;imagenes/muyBueno.png&quot;</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;imagenes/bueno.png&quot;</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;imagenes/normal.png&quot;</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;imagenes/malo.png&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;check&quot;</span> <span class="kw3">align</span><span class="sy0">=</span><span class="st0">&quot;center&quot;</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;radio&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;muyBueno&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;score&quot;</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;radio&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;bueno&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;score&quot;</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;radio&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;normal&quot;</span><span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;score&quot;</span>&gt;</span>
+        <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;radio&quot;</span><span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;malo&quot;</span><span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;score&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">footer</span>&gt;</span>Dada la inexistencia previa de condición médica especial, Renova Spa y el Hotel no se hacen responsables
+     de ningún efecto secundario resultante.
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">footer</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">br</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;submit&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Guardar&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;guardar&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;button&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;Imprimir archivo&quot;</span> <span class="kw3">onClick</span><span class="sy0">=</span><span class="st0">&quot;window.print()&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">link</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;estilos_impresion.css&quot;</span> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="kw3">media</span><span class="sy0">=</span><span class="st0">&quot;print&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">form</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span></pre>
+</div>
+
+<pre><code>&lt;/html&gt;
+</code></pre>
+
+
+</div>
+
+</div></body>
+</html>
