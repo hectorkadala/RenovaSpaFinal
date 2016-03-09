@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Naranjo Kadala Héctor" />
+    <meta name="date" content="03/09/2016"/>
+    <meta name="generator" content="easybook 4.8"/>
+
+    <title>Documentacion RenovaSpa</title>
+
+    <link rel="stylesheet" href="./css/easybook.css" />
+
+</head>
+
+<body><div class="container">
+
+    <div class="item item:cover">
+
+<h1>Documentacion RenovaSpa</h1>
+
+<h2>Naranjo Kadala Héctor</h2>
+
+</div>
+    <div class="item item:toc">
+
+<h1>Table of contents</h1>
+
+<ul>
+                        
+                                                                <li class="chapter level-1">
+                        <span>Chapter 1</span> <a href="#documentacion-del-codigo-php">Documentación del codigo PHP</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>1.1</span> <a href="#conexiophp">Conexio.php</a>
+                    </li>
+                                                                <li class="chapter level-2">
+                        <span>1.2</span> <a href="#guardarphp">Guardar.php</a>
+                    </li>
+                            
+                    </ul>
+
+</div>
+    <div class="item item:chapter">
+
+<h1 id="documentacion-del-codigo-php"><span>Chapter 1</span> Documentación del codigo PHP</h1>
+
+<p>Aqui veremos el código documentado, esto nos sirve para entenderlo mejor.</p>
+
+<h2 id="conexiophp">1.1 Conexio.php</h2>
+
+<p>Aqui vamos a documentar el codigo de conexion para la base de datos:</p>
+
+<div class="code php">
+<pre class="php">        <span class="kw2">&lt;?php</span>
+        <span class="co4">/**
+      * @author Naranjo Kadala Héctor
+      * @author Naranjo Kadala Héctor&lt;hectorhbk@hotmail.com&gt;
+      */</span>
+&nbsp;
+        <span class="co4">/**
+        *Hacemos una conexion en la base de datos llamada renovaspa1m
+        */</span>
+&nbsp;
+&nbsp;
+        <span class="re0">$conexion</span> <span class="sy0">=</span> <span class="kw3">mysql_connect</span><span class="br0">&#40;</span><span class="st0">&quot;localhost&quot;</span><span class="sy0">,</span><span class="st0">&quot;root&quot;</span><span class="sy0">,</span><span class="st0">&quot;&quot;</span><span class="br0">&#41;</span> Or <span class="kw3">die</span><span class="br0">&#40;</span><span class="st0">&quot;No se pudo conectar&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="kw1">if</span><span class="br0">&#40;</span><span class="re0">$conexion</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+            <span class="kw3">mysql_select_db</span><span class="br0">&#40;</span><span class="st0">&quot;renovaspa1&quot;</span><span class="sy0">,</span><span class="re0">$conexion</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="br0">&#125;</span><span class="kw1">else</span><span class="br0">&#123;</span>
+            <span class="kw1">echo</span> <span class="st0">&quot;Error&quot;</span><span class="sy0">;</span>
+        <span class="br0">&#125;</span>
+        <span class="sy1">?&gt;</span></pre>
+</div>
+
+<h2 id="guardarphp">1.2 Guardar.php</h2>
+
+<p>En este archivo se va guardar las variables insertadas en el index.html, donde los usuarios proporcionan su informacion:</p>
+
+<div class="code php">
+<pre class="php">    <span class="co4">/**
+    * @author Naranjo Kadala Héctor
+    * @author Naranjo Kadala Héctor&lt;hectorhbk@hotmail.com&gt;
+    */</span>
+&nbsp;
+    <span class="co4">/**
+    * En esta parte recibimos los parametros del archivo index.php los campos
+    * que llene el cliente.
+    */</span>
+    <span class="re0">$nombre</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'name'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$edad</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'age'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$pais</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'country'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$email</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'email'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$hotel</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'hotel'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$habitacion</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'room'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$agencia</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'agency'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$tratamiento</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'treatment'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$terapeuta</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'therapist'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$opcion</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'opcion'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+    <span class="re0">$calificacion</span> <span class="sy0">=</span> <span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st_h">'score'</span><span class="br0">&#93;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="co4">/**
+    * Aqui llamamos el archivo conexion.php para poder consultar a base de datos
+    *y poder guardar datos.
+    */</span>
+    <span class="kw1">require</span><span class="br0">&#40;</span><span class="st0">&quot;conexion.php&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="co4">/**
+    *Creamos variables para poder insertar en la base de datos donde la variable especifica
+    *a que tabla se va insertar y que campos se van llenar
+    */</span>
+    <span class="re0">$agregarCliente</span><span class="sy0">=</span><span class="kw3">mysql_query</span><span class="br0">&#40;</span><span class="st0">&quot;INSERT INTO cliente(nombre, edad, correo_electronico, habitacion)
+     VALUES ('<span class="es4">$nombre</span>','<span class="es4">$edad</span>','<span class="es4">$email</span>','<span class="es4">$habitacion</span>')&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="re0">$agregarPais</span><span class="sy0">=</span><span class="kw3">mysql_query</span><span class="br0">&#40;</span><span class="st0">&quot;INSERT INTO paises(nombre) VALUES ('<span class="es4">$pais</span>')&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="re0">$agregarAgencia</span><span class="sy0">=</span><span class="kw3">mysql_query</span><span class="br0">&#40;</span><span class="st0">&quot;INSERT INTO agencias(nombre_comercial) VALUES ('<span class="es4">$agencia</span>')&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="re0">$agregarHotel</span><span class="sy0">=</span><span class="kw3">mysql_query</span><span class="br0">&#40;</span><span class="st0">&quot;INSERT INTO hoteles(nombre) VALUES ('<span class="es4">$hotel</span>')&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="re0">$agregarTratamientos</span><span class="sy0">=</span><span class="kw3">mysql_query</span><span class="br0">&#40;</span><span class="st0">&quot;INSERT INTO tratamientos(nombre) VALUES ('<span class="es4">$tratamiento</span>')&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="re0">$agregarTerapeuta</span><span class="sy0">=</span><span class="kw3">mysql_query</span><span class="br0">&#40;</span><span class="st0">&quot;INSERT INTO terapeutas(nombre) VALUES ('<span class="es4">$terapeuta</span>')&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="re0">$agregarMedica</span><span class="sy0">=</span><span class="kw3">mysql_query</span><span class="br0">&#40;</span><span class="st0">&quot;INSERT INTO circustancias_medicas(nombre) VALUES ('<span class="es4">$opcion</span>')&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="re0">$agregarOpiniones</span><span class="sy0">=</span><span class="kw3">mysql_query</span><span class="br0">&#40;</span><span class="st0">&quot;INSERT INTO opiniones(nombre) VALUES ('<span class="es4">$calificacion</span>')&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="co4">/**
+    *Aqui mandamos un mensaje que se guardo correctamente  y nos redirige a index.php de nuevo 
+    */</span>
+    <span class="kw1">echo</span> <span class="st0">&quot;Guardo con exito&quot;</span><span class="sy0">;</span>
+    <span class="kw3">header</span><span class="br0">&#40;</span><span class="st0">&quot;location: index.php&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="sy1">?&gt;</span></pre>
+</div>
+
+
+</div>
+
+</div></body>
+</html>
